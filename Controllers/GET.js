@@ -126,7 +126,7 @@ const reset = async (req, res) => {
                 );
                 req.session.reset_token = emailToken;
 
-                const url = `http://localhost:5000/reset?token=${emailToken}`;
+                const url = `https://server.pronlinestore.com/reset?token=${emailToken}`;
 
                 transporter.sendMail({
                     from: `"PR Online Store" ${process.env.USER_ID}`,
@@ -192,7 +192,7 @@ const admin_reset = async (req, res) => {
                     );
                     req.session.reset_token = emailToken;
 
-                    const url = `http://localhost:5000/adminreset?token=${emailToken}`;
+                    const url = `https://server.pronlinestore.com/adminreset?token=${emailToken}`;
 
                     transporter.sendMail({
                         from: `"PR Online Store" ${process.env.USER_ID}`,

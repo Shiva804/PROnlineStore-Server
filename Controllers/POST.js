@@ -1,5 +1,5 @@
 const { nanoid } = require("nanoid");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const saltRounds = 10;
 const nodemailer = require("nodemailer");
 const Razorpay = require("razorpay");
@@ -171,7 +171,7 @@ const register = async (req, res) => {
                 },
                 process.env.JWT_SECRET
             );
-            const url = `http://localhost:5000/confirmation/${emailToken}`;
+            const url = `https://server.pronlinestore.com/confirmation/${emailToken}`;
             transporter.sendMail({
                 from: `"PR Online Store" ${process.env.USER_ID}`,
                 to: req.body.email,

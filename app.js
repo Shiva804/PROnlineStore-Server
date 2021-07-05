@@ -26,7 +26,8 @@ app.use(
 
 app.use(
     cors({
-        origin: ["https://www.pronlinestore.com/"],
+        origin: ["https://www.pronlinestore.com"],
+        // origin: ["http://localhost:3000"],
         methods: ["GET", "POST"],
         allowedHeaders: ["Content-Type", "Authorization"],
         credentials: true,
