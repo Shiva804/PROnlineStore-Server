@@ -225,7 +225,7 @@ app.post("/updateprice", authenticateAdminToken, postcontroller.update_price);
 
 //Start the server
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
     console.log("+        PR ONLINE STORE SERVER STARTED            +");
     console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
