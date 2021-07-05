@@ -36,7 +36,8 @@ imageToBase64("./static/download.png") // Path to the image
         console.log(error); // Logs an error if there was one
     });
 let transporter = nodemailer.createTransport({
-    service: "Godaddy",
+    // service: "Godaddy",
+    host: "smtp.secureserver.net",
     secure: true,
     port: 465,
 

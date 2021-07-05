@@ -20,7 +20,8 @@ const razorpay = new Razorpay({
 });
 
 let transporter = nodemailer.createTransport({
-    service: "Godaddy",
+    // service: "Godaddy",
+    host: "smtp.secureserver.net",
     secure: true,
     port: 465,
     tls: { rejectUnauthorized: false },
