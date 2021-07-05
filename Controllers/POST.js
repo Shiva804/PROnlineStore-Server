@@ -37,6 +37,8 @@ imageToBase64("./static/download.png") // Path to the image
     });
 let transporter = nodemailer.createTransport({
     service: "Godaddy",
+    secure: true,
+    port: 465,
     auth: {
         user: process.env.USER_ID,
         pass: process.env.PASSWORD,
