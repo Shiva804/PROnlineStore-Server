@@ -23,6 +23,7 @@ let transporter = nodemailer.createTransport({
     service: "Godaddy",
     secure: true,
     port: 465,
+    tls: { rejectUnauthorized: false },
     auth: {
         user: process.env.USER_ID,
         pass: process.env.PASSWORD,
