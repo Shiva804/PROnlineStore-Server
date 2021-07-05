@@ -224,8 +224,10 @@ app.post("/addproduct", authenticateAdminToken, postcontroller.add_product);
 app.post("/updateprice", authenticateAdminToken, postcontroller.update_price);
 
 //Start the server
-app.listen(process.env.PORT || 5000, () => {
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
     console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
     console.log("+        PR ONLINE STORE SERVER STARTED            +");
     console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    console.log(`Listening to ${port}`);
 });
